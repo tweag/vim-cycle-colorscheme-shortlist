@@ -19,4 +19,6 @@ function! CycleColorschemeShortlist()
   exec 'colorscheme '.next_scheme
 endfunction
 
-call CycleColorschemeShortlist()
+command! CycleColorschemeShortlist :call CycleColorschemeShortlist()
+
+CycleColorschemeShortlist
