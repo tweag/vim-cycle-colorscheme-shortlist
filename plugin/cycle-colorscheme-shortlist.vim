@@ -4,6 +4,7 @@ function! CycleColorSchemeShortlist()
   let len_shortlist = len(g:cycle_colorscheme_shortlist)
 
   if len_shortlist == 0
+    echo 'No color schemes specified in g:cycle_colorscheme_shortlist'
     return
   endif
 
