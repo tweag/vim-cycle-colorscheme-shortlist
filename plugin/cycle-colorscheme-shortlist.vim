@@ -1,6 +1,8 @@
-let g:cycle_colorscheme_shortlist = []
+if !exists("g:cycle_colorscheme_shortlist")
+  let g:cycle_colorscheme_shortlist = []
+endif
 
-function! CycleColorSchemeShortlist()
+function! CycleColorschemeShortlist()
   let len_shortlist = len(g:cycle_colorscheme_shortlist)
 
   if len_shortlist == 0
@@ -16,3 +18,5 @@ function! CycleColorSchemeShortlist()
 
   exec 'colorscheme '.next_scheme
 endfunction
+
+call CycleColorschemeShortlist()
